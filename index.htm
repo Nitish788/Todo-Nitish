@@ -11,16 +11,35 @@
 
 <body>
     <div class="container">
+        <div class="dates">
+            <div class="day"></div>
+            <div class="app">ToDo List</div>
+            <div class="date"></div>
+        </div>
         <div class="input">
-            <input type="text" class="what_todo" /><button class="add">+</button>
+            <input type="text" class="what_todo" /><button class="add">Add</button>
         </div>
-        <div class="todo__list">
-            <div class="todo">
-                Complete Javascript <button class="delete">A</button>
-            </div>
+        <div class="divide">
+            <div class="todo__list left">
+                <div class="todo">
+                    <span class="hide"> Complete Javascript </span
+            ><button class="delete">
+              <img src="delete.png" alt="" class="delete" />
+            </button>
+          </div>
         </div>
+        <div class="todo__list right">
+          <div class="todo">
+            <span class="hide"> Complete Javascript </span
+            ><button class="delete">
+              <img src="delete.png" alt="" class="delete" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="clear">X</button>
     </div>
-    <script src="script.js"></script>
-</body>
 
+    <script src="script.js"></script>
+  </body>
 </html>

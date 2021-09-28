@@ -45,7 +45,10 @@ function addList() {
     }
     labelLeft.innerHTML = " ";
     labelRight.innerHTML = " ";
-    console.log(task);
+    if (labelRight.innerText === "" || labelLeft.innerText === "") {
+        cancel.classList.add("hidden");
+    }
+
     task.forEach((el, i) => {
         if (i % 2 === 0) {
             let html = `<div class="todo"><span class ="hide">${el}</span><button class="delete"><img src="delete.png" alt="" class ="delete"/></button>
@@ -57,6 +60,9 @@ function addList() {
             labelRight.insertAdjacentHTML("beforeend", html);
         }
     });
+    if (labelRight.innerText !== "" || labelLeft.innerText !== "") {
+        cancel.classList.remove("hidden");
+    }
 }
 addList();
 
@@ -71,7 +77,6 @@ const deleteTask = function(e) {
         task.forEach((el, i) => {
             const current = curr.firstElementChild.innerText;
 
-            console.log(el === current);
             if (el === current) {
                 let localItems = JSON.parse(localStorage.getItem("localItem"));
 
@@ -88,7 +93,6 @@ labelRight.addEventListener("click", deleteTask);
 // Add Event Listner for clear whole list
 
 cancel.addEventListener("click", function() {
-    console.log("cl");
     localStorage.clear();
     addList();
 });
@@ -114,12 +118,3 @@ setInterval(() => {
     ).format(day);
     labelDate.textContent = new Intl.DateTimeFormat("en-GB", option2).format(day);
 }, 1000);
-
-if (labelRight.innerText === "" || labelLeft.innerText === "") {
-    console.log("hello");
-    cancel.classList.add("hidden");
-}
-if (labelRight.innerText !== "" || labelLeft.innerText !== "") {
-    cancel.classList.remove("hidden");
-}
-console.log(labelLeft.innerText === "");

@@ -1,3 +1,5 @@
+"use strict";
+
 const input = document.querySelector(".what_todo");
 
 const btnAdd = document.querySelector(".add");
@@ -9,7 +11,7 @@ const labelRight = document.querySelector(".right");
 const labelLeft = document.querySelector(".left");
 
 const cancel = document.querySelector(".clear");
-
+let task = [];
 // Create an Array for both localStorage and for script
 
 const store = function() {
@@ -48,10 +50,10 @@ function addList() {
     if (labelRight.innerText === "" || labelLeft.innerText === "") {
         cancel.classList.add("hidden");
     }
-
     task.forEach((el, i) => {
+        let html;
         if (i % 2 === 0) {
-            let html = `<div class="todo"><span class ="hide">${el}</span><button class="delete"><img src="delete.png" alt="" class ="delete"/></button>
+            html = `<div class="todo"><span class ="hide">${el}</span><button class="delete"><img src="delete.png" alt="" class ="delete"/></button>
     </div>`;
             labelLeft.insertAdjacentHTML("beforeend", html);
         } else {

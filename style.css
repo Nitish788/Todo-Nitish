@@ -23,6 +23,7 @@ body {
     font-size: 1.1rem;
     margin: 0.3rem;
     border: none;
+    border-radius: 0.6rem;
     font-family: "Lobster", cursive;
     box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.05), inset 3px 3px 7px rgba(0, 0, 0, 0.3);
 }
@@ -33,17 +34,15 @@ body {
     top: 0.2rem;
 }
 
-.what_todo:hover {
-    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.05), 6px 6px 16px rgba(0, 0, 0, 0.3), inset 6px 6px 16px rgba(255, 255, 255, 0.05), inset -6px -6px 16px rgba(0, 0, 0, 0.3);
-}
-
 input {
-    background-color: black;
+    /* background-color: black; */
+    background-color: #02080a;
     color: white;
 }
 
 .what_todo:focus {
     outline: none;
+    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.05), 6px 6px 16px rgba(0, 0, 0, 0.3), inset 6px 6px 16px rgba(255, 255, 255, 0.05), inset -6px -6px 16px rgba(0, 0, 0, 0.3);
 }
 
 button {
@@ -73,10 +72,10 @@ button {
 .dates {
     display: flex;
     justify-content: space-between;
-    font-size: 2.3rem;
-    margin: 0.3rem;
-    color: #c31432;
-    font-family: "Lobster", cursive;
+    font-size: 2rem;
+    margin: 0.4rem;
+    color: #e00429;
+    font-family: "Orbitron", sans-serif;
 }
 
 .app {

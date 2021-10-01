@@ -11,7 +11,9 @@ const labelRight = document.querySelector(".right");
 const labelLeft = document.querySelector(".left");
 
 const cancel = document.querySelector(".clear");
+
 let task = [];
+
 // Create an Array for both localStorage and for script
 
 const store = function() {
@@ -114,9 +116,9 @@ const option2 = {
 const day = new Date();
 
 setInterval(() => {
-    labelDay.textContent = new Intl.DateTimeFormat(
+    labelDay.textContent = new Intl.DateTimeFormat("en-GB", option).format(day);
+    labelDate.textContent = new Intl.DateTimeFormat(
         navigator.language,
-        option
+        option2
     ).format(day);
-    labelDate.textContent = new Intl.DateTimeFormat("en-GB", option2).format(day);
 }, 1000);

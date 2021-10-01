@@ -39,7 +39,6 @@ body {
 }
 
 input {
-    /* background-color: black; */
     background-color: #02080a;
     color: white;
 }
@@ -88,7 +87,6 @@ button {
     font-weight: bolder;
     font-family: serif;
     font-size: 2.5rem;
-    opacity: 1;
 }
 
 .todo__list {
@@ -157,4 +155,16 @@ button {
 
 .hidden {
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .date {
+        display: none;
+    }
+    .day {
+        display: none;
+    }
+    .app {
+        margin: auto;
+    }
 }

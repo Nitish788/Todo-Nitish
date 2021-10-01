@@ -167,4 +167,7 @@ button {
     .app {
         margin: auto;
     }
+    .clear {
+        display: none;
+    }
 }
